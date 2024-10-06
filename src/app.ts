@@ -1,18 +1,8 @@
+import configureOpenAPI from "@/lib/configure-openapi";
 import createApp from "@/lib/create-app";
 
-const app = createApp(); 
+const app = createApp();
 
-// base endpoint
-app.get("/", (c) => {
-  return c.text("Hello Hono!");
-});
-
-// error handler
-app.get("/error", (c) => {
-  c.status(500);
-  c.var.logger.info("All logs would be appear here!!");
-  throw new Error("Oh No!!, there're many Error's below!!");
-});
-
+configureOpenAPI(app);
 
 export default app;

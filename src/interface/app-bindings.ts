@@ -5,3 +5,6 @@ export interface AppBindings {
     logger: PinoLogger;
   };
 }
+
+
+export type AppOpenAPI = OpenAPIHono<AppBindings>
