@@ -1,18 +1,14 @@
+import configureOpenAPI from "@/lib/configure-openapi";
 import createApp from "@/lib/create-app";
+import index from "@/routes/index.route";
 
-const app = createApp(); 
+const app = createApp();
+const routes = [index];
 
-// base endpoint
-app.get("/", (c) => {
-  return c.text("Hello Hono!");
+configureOpenAPI(app);
+
+routes.forEach((route) => {
+  app.route("/", route);
 });
-
-// error handler
-app.get("/error", (c) => {
-  c.status(500);
-  c.var.logger.info("All logs would be appear here!!");
-  throw new Error("Oh No!!, there're many Error's below!!");
-});
-
 
 export default app;

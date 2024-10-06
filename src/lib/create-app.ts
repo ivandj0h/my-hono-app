@@ -6,8 +6,14 @@ import type { AppBindings } from "@/interface/app-bindings";
 
 import { pinoLogger } from "@/middlewares/pino-logger";
 
+export function createRouter() {
+  return new OpenAPIHono<AppBindings>({
+    strict: false,
+  });
+}
+
 export default function createApp() {
-  const app = new OpenAPIHono<AppBindings>();
+  const app = createRouter();
   app.use(serveEmojiFavicon("😍"));
   app.use(pinoLogger());
   app.notFound(notFound);
