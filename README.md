@@ -1,4 +1,4 @@
-# My Hono
+# My Hono App
 
 ## Description
 
@@ -11,15 +11,32 @@ Here i am using :
 - Hono
 - Typescript
 - pnpm
-- another dependencies
+- another dependencies, you can find it on `package.json`
+
+## Run the Application
+
+Before run the application, first you've to install all of the dependencies, by open your terminal and type :
 
 ```bash
 pnpm install
+```
+
+and then :
+
+```bash
 pnpm run dev
 ```
 
+- open the root application, just open browser and type :
+
 ```bash
-open http://localhost:9999
+http://localhost:9999
+```
+
+- open the documentations, just open browser and type :
+
+```bash
+http://localhost:9999/reference
 ```
 
 ## Credits
