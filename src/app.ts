@@ -1,13 +1,6 @@
-import { OpenAPIHono } from "@hono/zod-openapi";
-import { onError } from "stoker/middlewares";
-import notFound from "stoker/middlewares/not-found";
+import createApp from "@/lib/create-app";
 
-import type { AppBindings } from "./interface/app-bindings";
-
-import { pinoLogger } from "./middlewares/pino-logger";
-
-const app = new OpenAPIHono<AppBindings>();
-app.use(pinoLogger());
+const app = createApp(); 
 
 // base endpoint
 app.get("/", (c) => {
@@ -21,8 +14,5 @@ app.get("/error", (c) => {
   throw new Error("Oh No!!, there're many Error's below!!");
 });
 
-// not found
-app.notFound(notFound);
-app.onError(onError);
 
 export default app;
