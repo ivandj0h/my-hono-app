@@ -1,17 +1,21 @@
 {
   "name": "my-hono-app",
   "scripts": {
-    "dev": "tsx watch src/index.ts"
+    "dev": "tsx watch src/index.ts",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint --fix"
   },
   "dependencies": {
     "@hono/node-server": "^1.13.1",
-    "hono": "^4.6.3"
+    "@hono/zod-openapi": "^0.16.4",
+    "hono": "^4.6.3",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@types/node": "^20.11.17",
-    "tsx": "^4.7.1",
     "@antfu/eslint-config": "^3.7.3",
+    "@types/node": "^20.11.17",
     "eslint": "^9.11.1",
-    "eslint-plugin-format": "^0.1.2"
+    "eslint-plugin-format": "^0.1.2",
+    "tsx": "^4.7.1"
   }
 }
