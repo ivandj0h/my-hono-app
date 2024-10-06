@@ -14,7 +14,12 @@ export default function configureOpenAPI(app: AppOpenAPI) {
   });
 
   app.get("/reference", apiReference({
-    theme: "kepler",
+    theme: "bluePlanet",
+    layout: "modern",
+    defaultHttpClient: {
+      targetKey: "node",
+      clientKey: "axios",
+    },
     spec: {
       url: "/doc",
     },
