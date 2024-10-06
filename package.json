@@ -1,5 +1,6 @@
 {
   "name": "my-hono-app",
+  "type": "module",
   "version": "1.0.0",
   "scripts": {
     "dev": "tsx watch src/index.ts",
@@ -9,6 +10,7 @@
   "dependencies": {
     "@hono/node-server": "^1.13.1",
     "@hono/zod-openapi": "^0.16.4",
+    "@scalar/hono-api-reference": "^0.5.150",
     "dotenv": "^16.4.5",
     "dotenv-expand": "^11.0.6",
     "hono": "^4.6.3",
