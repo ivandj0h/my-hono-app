@@ -15,7 +15,7 @@ export default function configureOpenAPI(app: AppOpenAPI) {
 
   app.get("/reference", apiReference({
     theme: "bluePlanet",
-    layout: "modern",
+    layout: "classic",
     defaultHttpClient: {
       targetKey: "node",
       clientKey: "axios",
