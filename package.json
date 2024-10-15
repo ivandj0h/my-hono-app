@@ -13,7 +13,7 @@
     "@scalar/hono-api-reference": "^0.5.150",
     "dotenv": "^16.4.5",
     "dotenv-expand": "^11.0.6",
-    "hono": "^4.6.3",
+    "hono": "^4.6.5",
     "hono-pino": "^0.3.0",
     "pino": "^9.4.0",
     "pino-pretty": "^11.2.2",
